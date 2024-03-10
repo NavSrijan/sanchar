@@ -66,7 +66,7 @@ func register(db *gorm.DB, c *gin.Context) {
 	passwd_hash, err := hash_and_salt(passwd)
 	body.Passwd_hash = passwd_hash
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user. Inernal error."})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user. Internal error."})
 		return
 	}
 
